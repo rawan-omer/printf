@@ -41,5 +41,6 @@ int print_rev(va_list val);
 int print_rot13(va_list val);
 int print_string(va_list val);
 int print_unsigned(va_list args);
+int print_sign(va_list args);
 
 #endif
