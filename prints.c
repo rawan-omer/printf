@@ -10,17 +10,14 @@ int prints(va_list val)
 	int length;
 	char *s;
 
-	str = va_arg(val, char *);
-	if (str == NULL)
+	s = va_arg(val, char *);
+	if (s == NULL)
+		s = "(null)";
+	else
 	{
-		str = "(null)";
-		length = _strlen(str);
-		for (i = 0; i < length; i++)
-			_putchar(str[i]);
-		return (length);
+		length = _strlen(s);
+		for (i = 0 ; i < length ; i++)
+			_putchar(s[i]);
 	}
-
-	for (i = 0 ; i < length ; i++)
-		_putchar(str[i]);
 	return (length);
 }

@@ -6,14 +6,14 @@
  * Return: returns string
  */
 
-void print_rev(va_list val)
+int print_rev(va_list val)
 {
 	int i;
 	int count = 0;
-	char *s = va_arg(val, char *s);
+	char *s = va_arg(val, char *);
 
 	if (s == NULL)
-		i = "(null)";
+		s = "(null)";
 	for (i = 0 ; s[i] != '\0' ; i++)
 		count++;
 	for (i = count - 1 ; i >= 0 ; i--)

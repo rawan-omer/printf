@@ -9,11 +9,10 @@
 int _strlen(char *s)
 {
 	int i;
-	int count = 0;
 
 	for (i = 0 ; s[i] != '\0' ; i++)
-		count++;
-	return (count);
+		;
+	return (i);
 }
 /**
  * _strlenc - function to return length of string
@@ -24,9 +23,8 @@ int _strlen(char *s)
 int _strlenc(const char *s)
 {
 	int i;
-	int count = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
-		count++;
-	return (count);
+		;
+	return (i);
 }
