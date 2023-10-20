@@ -44,7 +44,7 @@ int print_sign(va_list args)
 		if (has_flag('+'))
 			sign = "+";
 		else if (has_flag(' '))
-			sign = " ';
+			sign = " ";
 	}
 	printed_chars = _printf("%s%d", sign, num);
 	return (printed_chars);
