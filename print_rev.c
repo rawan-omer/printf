@@ -9,15 +9,15 @@
 int print_rev(va_list val)
 {
 	int i;
-	int count = 0;
+	int c = 0;
 	char *s = va_arg(val, char *);
 
 	if (s == NULL)
 		s = "(null)";
-	for (i = 0 ; s[i] != '\0' ; i++)
-		count++;
-	for (i = count - 1 ; i >= 0 ; i--)
+	while (s[c] != '\0')
+		c++;
+	for (i = c - 1; i >= 0; i--)
 		_putchar(s[i]);
-	return (count);
+	return (c);
 }
 

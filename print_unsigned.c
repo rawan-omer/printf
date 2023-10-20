@@ -7,18 +7,18 @@
 int print_unsigned(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);
-	int num, last = n % 10, exp = 1, digit;
+	int num, l = n % 10, exp = 1, digit;
 	int i = 1;
 
 	n = n / 10;
 	num = n;
 
-	if (last < 0)
+	if (l < 0)
 	{
 		_putchar('-');
 		num = -num;
 		n = -n;
-		last = -last;
+		l = -l;
 		i++;
 	}
 	if (num > 0)
@@ -32,13 +32,12 @@ int print_unsigned(va_list args)
 		while (exp > 0)
 		{
 			digit = num / exp;
-			_putchar(digit + '\0');
+			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}
 	}
-	_putchar(last + '\0');
+	_putchar(l + '0');
 	return (i);
 }
-
